@@ -5,24 +5,27 @@ const store = createStore(todos);
 console.log(store)
 
 // Add to do item
-store.dispatch(addTodo('Feed goldfish', '😢 😢'));
+store.dispatch(addTodo('Feed goldfish 🐟'));
 console.log('%cInitial State with 1st to do item', 'color: yellow; font-family: Courier; font-size:20px', store.getState());
 
-store.dispatch(addTodo('Walk cat'))
+store.dispatch(addTodo('Walk cat 🐈'))
 console.log('%cState after adding 2nd todo', 'color: yellow; font-family: Courier; font-size:20px', store.getState())
 
-store.dispatch(addTodo('Wash feet'))
+store.dispatch(addTodo('Wash feet 🦶'))
 console.log('%cState after adding 3rd todo', 'color: yellow; font-family: Courier; font-size:20px', store.getState())
 
-store.dispatch(addTodo('Listen to plants'))
+store.dispatch(addTodo('Listen to plants 🏡'))
 console.log('%cState after adding 4th todo', 'color: yellow; font-family: Courier; font-size:20px', store.getState())
 
-store.dispatch(addTodo('Sleep'))
+store.dispatch(addTodo('Sleep 🛌'))
 console.log('%cState after adding 4th todo', 'color: yellow; font-family: Courier; font-size:20px', store.getState())
 
 // Toggle
-store.dispatch(toggleTodo(1))
-console.log('%cState after toggling first todo', 'color: pink; font-family: Courier; font-size:20px', store.getState())
+store.dispatch(toggleTodo(0))
+console.log('%cState after toggling 1st todo', 'color: pink; font-family: Courier; font-size:20px', store.getState())
+
+store.dispatch(toggleTodo(4))
+console.log('%cState after toggling 5th todo', 'color: pink; font-family: Courier; font-size:20px', store.getState())
 
 // Delete
 store.dispatch(deleteTodo(1))
