@@ -11,4 +11,4 @@ export const addTodo = text => ({
 export const toggleTodo = index => ({
   type: TOGGLE_TODO,
   index
-))
+})
