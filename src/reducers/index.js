@@ -3,7 +3,7 @@ import {
   TOGGLE_TODO
 } from '../actions'
 
-function todos(state = [], action) {
+function todos (state = [], action) {
   switch (action.type) {
     case ADD_TODO:
       return [
