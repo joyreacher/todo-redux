@@ -18,3 +18,4 @@ function todos(state = [], action) {
       )
   }
 }
+export default todos
