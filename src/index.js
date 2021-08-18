@@ -2,22 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import * as serviceWorker from './serviceWorker';
 
-
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
-
+// TASK
 import { createStore } from 'redux'
-import todos from './reducers'
-import { addTodo, toggleTodo, deleteTodo } from './actions';
+import todos from './reducers/index'
+import { addTodo, toggleTodo, deleteTodo, login } from './actions';
 const store = createStore(todos);
-console.log(store)
 
-// Add to do item
+// LOGIN
+store.dispatch(login('Brian', 'password'));
+console.log('%cLOGIN', 'color: orange; font-family: Courier; font-size:20px', store.getState());
+
 store.dispatch(addTodo('Feed goldfish 🐟'));
 console.log('%cInitial State with 1st to do item', 'color: yellow; font-family: Courier; font-size:20px', store.getState());
 
