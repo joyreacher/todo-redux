@@ -2,7 +2,6 @@ import {
   ADD_TODO,
   TOGGLE_TODO,
   DELETE_TODO,
-  LOGIN
 } from '../actions'
 
 function todos (state = [], action) {
@@ -20,14 +19,6 @@ function todos (state = [], action) {
     case DELETE_TODO:
       state.splice(action.index, 1)
       return state
-    case LOGIN:
-      return [
-        ...state,
-        {
-          username: action.username,
-          password: action.password
-        }
-      ]
   }
 }
 export default todos
